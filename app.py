@@ -120,8 +120,8 @@ vol_mult = st.sidebar.slider("Minimum Breakout Volume Multiplier (x)", 1.5, 5.0,
 box_tightness = st.sidebar.slider("Maximum Box Tightness/Width (%)", 2.0, 10.0, 5.0, 0.5)
 consol_days = st.sidebar.number_input("Consolidation Days in Box", min_value=3, max_value=15, value=6)
 
-# Load list
-all_nse_tickers = fetch_entire_universe()
+# FIXED: Ab dono names bilkul match kar rahe hain
+all_nse_tickers = fetch_entire_nse_universe()
 
 st.sidebar.metric("Total Active NSE Symbols", len(all_nse_tickers))
 
